@@ -40,4 +40,18 @@ class Database
         return $this->database;
     }
 
+    /**
+     * Executing a query
+     * @param Query $query
+     * @param array $array
+     * @return PDOStatement
+     */
+    public function executeQuery(Query $query, Array $array=Array())
+    {
+        $ps = $this->database->prepare($query->toString());
+        $ps->execute($array);
+
+        return $ps;
+    }
+
 }

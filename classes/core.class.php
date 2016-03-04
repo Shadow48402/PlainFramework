@@ -17,6 +17,7 @@ class Core
         require_once('database.class.php');
         require_once('theme.class.php');
         require_once('view.class.php');
+        require_once('query.class.php');
 
         require_once('configs/template.config.php');
         require_once('configs/database.config.php');
@@ -35,8 +36,6 @@ class Core
             $this->database = new Database($this->config['database']['dsn'],
                 $this->config['database']['username'],
                 $this->config['database']['password']);
-
-            $this->connection = $this->database->getConnection();
         }
     }
 
