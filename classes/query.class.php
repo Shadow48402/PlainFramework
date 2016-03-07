@@ -7,6 +7,7 @@
 class Query
 {
     protected $query;
+    protected $set = false;
 
     public function __construct(){ $this->query = ''; }
 
@@ -75,6 +76,14 @@ class Query
 
     public function set($column, $value)
     {
+        if(!$this->set)
+        {
+            $this->query .= 'SET ';
+            $this->set = true;
+        } else
+        {
+            $this->query .= ', ';
+        }
         $this->query .= $column.'='.$value.' ';
 
         return $this;
@@ -128,6 +137,13 @@ class Query
     public function drop($object, $value)
     {
         $this->query .= 'DROP '.$object.' '.$value;
+
+        return $this;
+    }
+
+    public function comma()
+    {
+        $this->query .= ', ';
 
         return $this;
     }
