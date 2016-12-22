@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  ************************************************
@@ -6,11 +7,16 @@
  ************************************************
  *
  *   Created by Niels Hamelink
- *   File: index.php
+ *   File: model.Model.php
  *   Website: www.nielsha.nl
- *   Created at: 14-11-2016 02:29
+ *   Created at: 14-11-2016 08:25
  **/
+abstract class Model
+{
+    protected $_db;
 
-require('framework/bin/class.application.php');
-$app = new Application();
-$app->load_path();
+    public function __construct()
+    {
+        $this->_db = Database::getPDO();
+    }
+}

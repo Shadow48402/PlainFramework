@@ -6,11 +6,14 @@
  ************************************************
  *
  *   Created by Niels Hamelink
- *   File: index.php
+ *   File: config_files.php
  *   Website: www.nielsha.nl
- *   Created at: 14-11-2016 02:29
+ *   Created at: 14-11-2016 02:34
  **/
 
-require('framework/bin/class.application.php');
-$app = new Application();
-$app->load_path();
+return array(
+    'class.database.php',
+    'class.model.php',
+    'class.controller.php',
+    'class.view.php'
+);
