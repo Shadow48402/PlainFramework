@@ -15,7 +15,8 @@ return array(
     'general' => [
         'app_name' => 'PlainFramework',
         'url' => 'localhost:8080',
-        'path' => $_GET['path']
+        'path' => $_GET['path'],
+        'default_language' => 'nl'
     ],
     'database' => [
         'enable' => true,

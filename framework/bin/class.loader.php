@@ -24,7 +24,7 @@ class Loader
 
     public function language($language_name, View $view)
     {
-        $language_path = '../models/' . Language::$language_code . '/lang.' . strtolower($language_name) . '.php';
+        $language_path = '../languages/' . Language::$language_code . '/lang.' . strtolower($language_name) . '.php';
 
         if(!file_exists($language_path))
             Application::throw_error('Model ' . strtolower($language_name) . ' could not be loaded!');
