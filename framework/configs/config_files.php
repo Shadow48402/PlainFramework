@@ -18,7 +18,6 @@ return array(
     'class.view.php',
     'class.query.php',
     'class.response.php',
-    'class.session.php',
     'class.loader.php',
     'class.language.php'
 );
