@@ -15,5 +15,10 @@ return array(
     'class.database.php',
     'class.model.php',
     'class.controller.php',
-    'class.view.php'
+    'class.view.php',
+    'class.query.php',
+    'class.response.php',
+    'class.session.php',
+    'class.loader.php',
+    'class.language.php'
 );

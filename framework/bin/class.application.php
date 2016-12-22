@@ -31,7 +31,7 @@ class Application
     /**
      * FILE HANDLING
      */
-    public static function load_models($models)
+    /*public static function load_models($models)
     {
         if(isset($config)) {
             foreach ($models as $model) {
@@ -44,7 +44,7 @@ class Application
                 require($file);
             }
         }
-    }
+    }*/
 
     public function load_files()
     {

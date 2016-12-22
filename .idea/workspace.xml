@@ -24,11 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.loader.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="class.loader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/bin/class.loader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="11" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+            <state relative-caret-position="442">
+              <caret line="26" column="69" lean-forward="false" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.application.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/framework/bin/class.application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3001">
+              <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_files.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/configs/config_files.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/bin/class.controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -46,9 +76,7 @@
         <option value="$PROJECT_DIR$/framework/bin/class.basemodel.php" />
         <option value="$PROJECT_DIR$/framework/bin/class.sniffer.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/framework/bin/class.controller.php" />
         <option value="$PROJECT_DIR$/app/views/test.tpl" />
-        <option value="$PROJECT_DIR$/framework/configs/config_files.php" />
         <option value="$PROJECT_DIR$/framework/bin/class.view.php" />
         <option value="$PROJECT_DIR$/framework/bin/class.model.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -60,11 +88,14 @@
         <option value="$PROJECT_DIR$/framework/bin/Response.php" />
         <option value="$PROJECT_DIR$/app/config.php" />
         <option value="$PROJECT_DIR$/app/models/UserModel.php" />
-        <option value="$PROJECT_DIR$/framework/bin/class.application.php" />
         <option value="$PROJECT_DIR$/app/paths.php" />
         <option value="$PROJECT_DIR$/framework/bin/class.session.php" />
         <option value="$PROJECT_DIR$/app/controllers/controller.home.php" />
+        <option value="$PROJECT_DIR$/framework/bin/class.language.php" />
         <option value="$PROJECT_DIR$/framework/bin/class.loader.php" />
+        <option value="$PROJECT_DIR$/framework/bin/class.application.php" />
+        <option value="$PROJECT_DIR$/framework/bin/class.controller.php" />
+        <option value="$PROJECT_DIR$/framework/configs/config_files.php" />
       </list>
     </option>
   </component>
@@ -149,6 +180,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlainFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlainFramework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,15 +353,15 @@
       <option name="presentableId" value="Default" />
       <updated>1479085050796</updated>
       <workItem from="1482315003269" duration="356000" />
-      <workItem from="1482420136462" duration="1160000" />
+      <workItem from="1482420136462" duration="2158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1516000" />
+    <option name="totallyTimeSpent" value="2514000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -354,14 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/paths.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -656,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/configs/config_files.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/bin/class.response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -704,22 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/bin/class.application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/bin/class.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/bin/class.session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -751,10 +769,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bin/class.language.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/framework/bin/class.loader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="11" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        <state relative-caret-position="442">
+          <caret line="26" column="69" lean-forward="false" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bin/class.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/configs/config_files.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bin/class.application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3001">
+          <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
           <folding />
         </state>
       </provider>

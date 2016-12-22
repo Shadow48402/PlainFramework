@@ -13,12 +13,14 @@
  **/
 abstract class Controller
 {
-    protected $form;
+    protected   $form,
+                $load;
 
     public function __construct()
     {
         $this->form = [];
         $this->form ['post'] = $_POST;
         $this->form ['get'] = $_GET;
+        $this->load = new Loader();
     }
 }
