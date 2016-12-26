@@ -11,11 +11,12 @@
  *   Created at: 14-11-2016 02:22
  **/
 
+$path = isset($_GET['path']) ? $_GET['path'] : '';
 return array(
     'general' => [
         'app_name' => 'PlainFramework',
         'url' => 'localhost:8080',
-        'path' => $_GET['path'],
+        'path' => $path,
         'default_language' => 'nl'
     ],
     'database' => [

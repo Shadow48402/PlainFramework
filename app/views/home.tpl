@@ -1,1 +1,1 @@
-Home
+<h1>PlainFramework installed succesfully</h1>

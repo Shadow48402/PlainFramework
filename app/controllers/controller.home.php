@@ -16,19 +16,12 @@ class HomeController extends Controller
 
     public function home()
     {
+        $this->load->model('blog');
+        $blog_items = $this->load->model_blog->getItems();
+
         $view = new View('home');
+        $view->set('blog_items', $blog_items);
         $view->display();
-    }
-
-    public function test()
-    {
-        $view = new View('test');
-        $view->display();
-    }
-
-    public function testpath($args=[])
-    {
-        print_r($args);
     }
 
 }

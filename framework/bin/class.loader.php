@@ -12,11 +12,11 @@ class Loader
 
     public function model($model_name)
     {
-        $model_path = '../models/model.' . strtolower($model_name) . '.php';
+        $model_path = 'app/models/model.' . strtolower($model_name) . '.php';
         $model_class = 'Model' . ucfirst($model_name);
 
         if(!file_exists($model_path))
-            Application::throw_error('Model ' . strtolower($model_name) . ' could not be loaded!');
+            Application::throw_error('Model ' . strtolower($model_name) . '(' . $model_path . ') could not be loaded!');
 
         require_once($model_path);
         $this->models[strtolower($model_name)] = new $model_class();
@@ -42,7 +42,7 @@ class Loader
         if($start_model == 'model_')
         {
             $model_name = str_ireplace('model_', '', $name);
-            if(in_array($model_name, $this->models))
+            if(isset($this->models[$model_name]))
                 return $this->models[$model_name];
             else
                 Application::throw_error('Model ' . $model_name . ' does not exist!');

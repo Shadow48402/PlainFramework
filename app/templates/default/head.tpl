@@ -1,1 +1,2 @@
-<title>Test</title>
+<title>PlainFramework - Installed</title>
+<link rel="stylesheet" href="" />

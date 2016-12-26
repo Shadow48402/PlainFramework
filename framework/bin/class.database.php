@@ -13,13 +13,13 @@
  **/
 class Database
 {
-    private static $_db;
+    static protected $_db;
 
     public static function connect($dsn, $username, $password, $debug)
     {
         try
         {
-            $_db = new PDO($dsn, $username, $password);
+            self::$_db = new PDO($dsn, $username, $password);
         } catch(PDOException $e)
         {
             if($debug)
@@ -34,27 +34,35 @@ class Database
 
     public static function isConnected()
     {
-        return isset($_db)
-            && $_db != null;
+        return isset(self::$_db)
+            && self::$_db != null;
     }
 
-    public static function getPDO()
+    public static function getDB()
     {
-        if(!isset($_db))
-            $_db = null;
+        if(!isset(self::$_db))
+            return null;
 
-        return $_db;
+        return self::$_db;
+    }
+
+    /*public static function preparedStatement($query, $values=[])
+    {
+        $query = self::$_db->prepare($query);
+        $query->execute($values);
+
+        return $query;
     }
 
     public static function executeQuery(Query $query)
     {
         try
         {
-            return Database::getPDO()->query($query->toString());
+            return self::$_db->query($query->toString());
         } catch(PDOException $ex)
         {
             Application::throw_error($ex->getMessage());
         }
-    }
+    }*/
 
 }
