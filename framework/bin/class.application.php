@@ -106,6 +106,7 @@ class Application
      */
     public function setup_libs()
     {
+        // Setup Smarty
         if($this->_config['tpl']['enabled'])
         {
             require_once($this->_config['tpl']['path']);
@@ -116,7 +117,19 @@ class Application
             $this->_smarty->setConfigDir($this->_config['tpl']['configs']);
             $this->_smarty->setCacheDir($this->_config['tpl']['cache']);
             $this->_smarty->debugging = $this->_config['tpl']['debug'];
+
+            $this->_smarty->assign('dir', [
+                'base' => $this->_config['general']['ssl'] . '://' . $this->_config['general']['url'],
+                'libs' => $this->_config['general']['ssl'] . '://' . $this->_config['general']['url'] . '/app/libs/',
+                'img' => $this->_config['general']['ssl'] . '://' . $this->_config['general']['url'] . '/app/libs/images/'
+            ]);
         }
+
+        // Setup default language
+        if(!isset($_SESSION['language_code']))
+            Language::setLanguage($this->_config['general']['default_language']);
+        else
+            Language::setLanguage($_SESSION['language_code']);
     }
 
     public function getSmartyInit()
@@ -245,6 +258,7 @@ class Application
         $view = new View($this->_config['errors'][$error]);
         $view->display();
     }
+
 
     /**
      * LOG HANDLING

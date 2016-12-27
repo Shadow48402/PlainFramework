@@ -8,10 +8,16 @@
  */
 class Language
 {
-    public static $language_code = null;
+    static protected $language_code = null;
 
     public static function setLanguage($language_code)
     {
         self::$language_code = $language_code;
     }
+
+    public static function getLanguage()
+    {
+        return self::$language_code;
+    }
+
 }
