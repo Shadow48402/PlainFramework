@@ -16,12 +16,31 @@ class Database
     static protected    $_db,
         $_prefix;
 
-    public static function connect($dsn, $username, $password, $debug, $prefix)
+    public static function connect($dsn, $username, $password, $encoding, $debug, $prefix)
     {
         try
         {
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            );
+
+            if(!empty($encoding))
+            {
+                if( version_compare(PHP_VERSION, '5.3.6', '<') ){
+                    if( defined('PDO::MYSQL_ATTR_INIT_COMMAND') ){
+                        $options[PDO::MYSQL_ATTR_INIT_COMMAND] = 'SET NAMES ' . $encoding;
+                    }
+                }else{
+                    $dsn .= ';charset=' . $encoding;
+                }
+            }
             self::$_db = new PDO($dsn, $username, $password);
             self::$_prefix = $prefix;
+
+            if( version_compare(PHP_VERSION, '5.3.6', '<') && !defined('PDO::MYSQL_ATTR_INIT_COMMAND') ){
+                $encoding = (!empty($encoding)) ? $encoding : 'utf8';
+                self::$_db->exec('SET NAMES ' . $encoding);
+            }
         } catch(PDOException $e)
         {
             if($debug)
@@ -96,6 +115,13 @@ class DatabaseObject {
 
         return $query;
     }
+
+    public function quote($string)
+    {
+        $this->_db->quote($string);
+    }
+
+
 
     public function getPrefix()
     {

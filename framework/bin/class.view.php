@@ -20,8 +20,11 @@ class View
         $this->name = $name;
     }
 
-    public function set($name, $value)
+    public function set($name, $value, $escape=true)
     {
+        if($escape)
+            $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+
         $this->variables[$name] = $value;
     }
 
@@ -38,6 +41,8 @@ class View
     public function display()
     {
         global $app;
+
+        header('Content-Type: text/html; charset=utf-8');
 
         $smarty = $app->getSmartyInit();
         $smarty->assign('view_name', $app->getConfig()['tpl']['views'] . $this->name . '.tpl');

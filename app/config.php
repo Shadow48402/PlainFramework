@@ -26,6 +26,7 @@ return array(
         'username' => 'root',
         'password' => 'root',
         'prefix' => 'pf_',
+        'encoding' => 'utf8',
         'debug' => true
     ],
     'dir' => [
