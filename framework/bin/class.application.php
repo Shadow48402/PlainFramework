@@ -97,7 +97,8 @@ class Application
             $dsn,
             $this->_config['database']['username'],
             $this->_config['database']['password'],
-            $this->_config['database']['debug']
+            $this->_config['database']['debug'],
+            $this->_config['database']['prefix']
         );
     }
 

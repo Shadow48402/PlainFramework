@@ -25,6 +25,7 @@ return array(
         'database' => 'plainframework',
         'username' => 'root',
         'password' => 'root',
+        'prefix' => 'pf_',
         'debug' => true
     ],
     'dir' => [

@@ -13,10 +13,11 @@
  **/
 abstract class Model
 {
-    protected $_db;
+    protected $db;
 
     public function __construct()
     {
-        $this->_db = Database::getDB();
+        $this->db = Database::getDB();
+        $this->db_prefix = $this->db->getPrefix();
     }
 }
