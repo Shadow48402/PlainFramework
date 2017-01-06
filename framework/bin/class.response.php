@@ -24,4 +24,12 @@ class Response
         $view->display();
     }
 
+    public static function code($response_code)
+    {
+        if (version_compare(phpversion(), '5.4.0', '<'))
+            header('Not found', true, $response_code);
+        else
+            http_response_code($response_code);
+    }
+
 }

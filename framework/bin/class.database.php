@@ -110,18 +110,37 @@ class DatabaseObject {
 
     public function preparedStatement($query, $values=[])
     {
+        $plainquery = $query;
+        foreach($values as $key => $val)
+        {
+            $plainquery = str_ireplace($key, $val, $plainquery);
+        }
+
+        if(Cache::contains($plainquery))
+            return Cache::get($plainquery);
+
         $query = $this->_db->prepare($query);
         $query->execute($values);
+        Cache::store($plainquery, $query);
 
         return $query;
+    }
+
+    public function query($query)
+    {
+        if(Cache::contains($query))
+            return Cache::get($query);
+
+        $exec = $this->_db->query($query);
+        Cache::store($query, $exec);
+
+        return $exec;
     }
 
     public function quote($string)
     {
         $this->_db->quote($string);
     }
-
-
 
     public function getPrefix()
     {

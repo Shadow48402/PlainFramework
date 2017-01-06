@@ -13,7 +13,10 @@
  **/
 class View
 {
-    protected $name, $variables, $template_name;
+    protected   $name,
+                $variables,
+                $template_name,
+                $response_code;
 
     public function __construct($name)
     {
