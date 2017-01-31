@@ -62,7 +62,10 @@ class ModelBlog extends Model {
     
     public function getItems()
     {
-        $query = $this->db->preparedStatement('SELECT * FROM ' . $this->db_prefix . 'blog_item WHERE public=:public', [':public' => 1]);
+        $query = $this->db->preparedStatement(
+            'SELECT * FROM ' . $this->db_prefix . 'blog_item WHERE public=:public', 
+            [':public' => 1]
+        );
         return $query;
     }
     
@@ -89,6 +92,6 @@ By changing the SESSION variable `$_SESSION['language_code']` you are able to ch
 
 ## XSS and SQL protection
 
-PlainFramework does contain different tools to protect XSS injection as well as SQL injection, the `$view->set($key, $value)` function does contain another parameter `$view->set($key, $value, $encoding)`, the encoding parameter is a boolean en escapes HTML characters when set to true (default true).
+PlainFramework does contain different tools to protect XSS injection as well as SQL injection, the `$view->set($key, $value)` function does contain another parameter `$view->set($key, $value[, $encoding=true])`, the encoding parameter is a boolean en escapes HTML characters when set to true (default true).
 
 Since PDO has the function to use named parameters in prepared statements it's not required to prevent anything more than this.
