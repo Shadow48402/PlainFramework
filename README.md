@@ -8,6 +8,8 @@ PlainFramework is a MVC web application framework with an elegant syntax to make
 - Simple, fast routing
 - Simple database class (using PDO)
 - Template engine (Smarty) inbuilt
+- Query result caching
+- Image caching, with resizing tool
 - Query builder
 
 ## Installation
