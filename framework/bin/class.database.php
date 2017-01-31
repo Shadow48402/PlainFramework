@@ -100,7 +100,7 @@ class Database
 
 class DatabaseObject {
     protected   $_db,
-        $_prefix;
+                $_prefix;
 
     public function __construct($_db, $_prefix)
     {
@@ -108,31 +108,39 @@ class DatabaseObject {
         $this->_prefix = $_prefix;
     }
 
-    public function preparedStatement($query, $values=[])
+    public function preparedStatement($query, $values=[], $cache=true)
     {
-        $plainquery = $query;
-        foreach($values as $key => $val)
+        if($cache)
         {
-            $plainquery = str_ireplace($key, $val, $plainquery);
-        }
+            $plainquery = $query;
+            foreach($values as $key => $val)
+            {
+                $plainquery = str_ireplace($key, $val, $plainquery);
+            }
 
-        if(Cache::contains($plainquery))
-            return Cache::get($plainquery);
+            if(Cache::contains($plainquery))
+                return Cache::get($plainquery);
+        }
 
         $query = $this->_db->prepare($query);
         $query->execute($values);
-        Cache::store($plainquery, $query);
+
+        if($cache)
+            Cache::store($plainquery, $query);
 
         return $query;
     }
 
-    public function query($query)
+    public function query($query, $cache=true)
     {
-        if(Cache::contains($query))
-            return Cache::get($query);
+        if($cache)
+            if(Cache::contains($query))
+                return Cache::get($query);
 
         $exec = $this->_db->query($query);
-        Cache::store($query, $exec);
+
+        if($cache)
+            Cache::store($query, $exec);
 
         return $exec;
     }

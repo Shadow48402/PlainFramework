@@ -127,6 +127,9 @@ class Application
             ]);
         }
 
+        // Setup SimpleImage
+        require_once($this->_config['tpl']['image_path']);
+
         // Setup default language
         if(!isset($_SESSION['language_code']))
             Language::setLanguage($this->_config['general']['default_language']);

@@ -49,11 +49,13 @@ return array(
         'enabled' => true,
         'debug' => false,
         'path' => 'framework/libs/smarty/Smarty.class.php',
+        'image_path' => 'framework/libs/simpleimage/SimpleImage.php',
         'views' => 'app/views/',
         'templates' => 'app/templates/',
         'default_template' => 'default',
         'compile' => 'framework/storage/templates_c',
         'configs' => 'framework/configs',
-        'cache' => 'framework/storage/cache'
+        'cache' => 'framework/storage/cache',
+        'img_cache' => 'app/libs/images/cache/'
     ]
 );

@@ -19,5 +19,6 @@ return array(
     'class.query.php',
     'class.response.php',
     'class.loader.php',
-    'class.language.php'
+    'class.language.php',
+    'class.image.php'
 );
